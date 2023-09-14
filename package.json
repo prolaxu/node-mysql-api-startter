@@ -1,0 +1,50 @@
+{
+  "name": "api-stater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register  src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "seed": "ts-node -r tsconfig-paths/register  src/core/commands/seed.ts",
+    "migrate": "drizzle-kit push:mysql --config=src/config/drizzle.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "@ngneat/falso": "^7.1.0",
+    "bcrypt": "^5.1.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.28.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.6.0",
+    "twilio": "^4.16.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@ef-carbon/tspm": "^2.2.5",
+    "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^20.5.9",
+    "@types/uuid": "^9.0.3",
+    "drizzle-kit": "^0.19.13",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "tscpaths": "^0.0.9",
+    "typescript": "^5.2.2"
+  }
+}

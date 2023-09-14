@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es2016",                                
+    "module": "commonjs",                            
+    "esModuleInterop": true,                            
+    "forceConsistentCasingInFileNames": true,       
+    "strict": true,                                     
+    "lib": ["DOM", "ES6", "ESNext.AsyncIterable"],
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "paths": {
+      "@@/*": ["../*"],
+      "@/*": ["*"],
+      "@core/*": ["core/*"],
+      "@routes/*": ["routes/*"],
+      "@controller/*": ["app/http/controllers/*"],
+      "@middleware/*": ["app/http/middlewares/*"],
+      "@dto/*": ["app/http/dtos/*"],
+      "@model/*": ["app/models/*"],
+      "@service/*": ["app/services/*"],
+      "@config/*": ["config/*"],
+      "@database/*": ["database/*"],
+      "@factory/*": ["database/factories/*"],
+      "@migration/*": ["database/migrations/*"],
+      "@seeder/*": ["database/seeders/*"]
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "src/**/*.test.ts", "src/**/*.spec.ts"]
+}
